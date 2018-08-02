@@ -3,7 +3,7 @@ import { MapStateToProps, connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { ANNOUNCEMENT_MESSAGE, ANNOUNCEMENT_TYPE, languages } from 'config';
+import { languages } from 'config';
 import { NetworkConfig } from 'types/network';
 import { getKeyByValue } from 'utils/helpers';
 import logo from 'assets/images/logo-mycrypto.svg';
@@ -78,12 +78,6 @@ class Header extends Component<Props, State> {
 
     return (
       <div className="Header">
-        {ANNOUNCEMENT_MESSAGE && (
-          <div className={`Header-announcement is-${ANNOUNCEMENT_TYPE}`}>
-            {ANNOUNCEMENT_MESSAGE}
-          </div>
-        )}
-
         <section className="Header-branding">
           <section className="Header-branding-inner container">
             <Link to="/" className="Header-branding-title" aria-label="Go to homepage">
