@@ -7,6 +7,7 @@ import { languages } from 'config';
 import { NetworkConfig } from 'types/network';
 import { getKeyByValue } from 'utils/helpers';
 import logo from 'assets/images/logo-mycrypto.svg';
+import StatusLogo from 'assets/images/logo-status.svg';
 import { OldDropDown } from 'components/ui';
 import {
   AddCustomNodeAction,
@@ -83,7 +84,7 @@ class Header extends Component<Props, State> {
             <Link to="/" className="Header-branding-title" aria-label="Go to homepage">
               <img
                 className="Header-branding-title-logo"
-                src={logo}
+                src={StatusLogo}
                 height="64px"
                 width="245px"
                 alt="MyCrypto logo"
