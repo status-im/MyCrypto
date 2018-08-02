@@ -50,27 +50,27 @@ class OnboardModal extends React.Component<Props, State> {
     const { sessionStarted } = this.props;
     const currentSlide = Number(localStorage.getItem(ONBOARD_LOCAL_STORAGE_KEY)) || 0;
 
-    if (!sessionStarted) {
-      this.props.startOnboardSession();
-      if (currentSlide === 0) {
-        this.setState({
-          isOpen: true
-        });
-      }
-      if (currentSlide > 0 && currentSlide < NUMBER_OF_ONBOARD_SLIDES) {
-        this.props.resumeSlide(currentSlide);
-        this.setState({
-          isOpen: true
-        });
+    /* if (!sessionStarted) {
+     *   this.props.startOnboardSession();
+     *   if (currentSlide === 0) {
+     *     this.setState({
+     *       isOpen: true
+     *     });
+     *   }
+     *   if (currentSlide > 0 && currentSlide < NUMBER_OF_ONBOARD_SLIDES) {
+     *     this.props.resumeSlide(currentSlide);
+     *     this.setState({
+     *       isOpen: true
+     *     });
 
-        const onboardResumeMessage = translateRaw('ONBOARD_RESUME');
+     *     const onboardResumeMessage = translateRaw('ONBOARD_RESUME');
 
-        // Wait a sec so it doesn't get lost in the page-load
-        setTimeout(() => {
-          this.props.showNotification('info', onboardResumeMessage, 6000);
-        }, 1200);
-      }
-    }
+     *     // Wait a sec so it doesn't get lost in the page-load
+     *     setTimeout(() => {
+     *       this.props.showNotification('info', onboardResumeMessage, 6000);
+     *     }, 1200);
+     *   }
+     * } */
   }
 
   public render() {
