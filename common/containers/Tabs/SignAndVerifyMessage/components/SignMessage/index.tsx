@@ -79,12 +79,23 @@ export class SignMessage extends Component<Props, State> {
 
             {signedMessage && (
               <div className="input-group-wrapper SignMessage-inputBox">
-                <CopyToClipboard text={JSON.stringify(signedMessage, null, 2)}>
-                  <label className="input-group">
+                <CopyToClipboard
+                  text={JSON.stringify(signedMessage, null, 2)}
+                  onCopy={() => {
+                    this.setState({ copied: true });
+                  }}
+                >
+                  <label
+                    className="input-group"
+                    style={{ color: this.state.copied ? 'green' : null }}
+                  >
                     <div className="input-group-header">
                       {translate('MSG_SIGNATURE')} (Click to copy to clipboard)
                     </div>
-                    <CodeBlock className="SignMessage-inputBox">
+                    <CodeBlock
+                      className="SignMessage-inputBox"
+                      color={this.state.copied ? 'green' : null}
+                    >
                       {JSON.stringify(signedMessage, null, 2)}
                     </CodeBlock>
                   </label>

@@ -7,9 +7,9 @@ interface Props {
   className?: string;
 }
 
-const CodeBlock = ({ children, className }: Props) => (
+const CodeBlock = ({ children, className, color }: Props) => (
   <pre className={`${className} CodeBlock`}>
-    <code>{children}</code>
+    <code style={{ color }}>{children}</code>
   </pre>
 );
 
