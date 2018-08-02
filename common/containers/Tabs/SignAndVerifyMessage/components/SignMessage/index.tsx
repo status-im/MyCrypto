@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import translate, { translateRaw } from 'translations';
 import { ISignedMessage } from 'libs/signing';
@@ -69,20 +70,25 @@ export class SignMessage extends Component<Props, State> {
               </label>
               <div className="SignMessage-help">{translate('MSG_INFO2')}</div>
             </div>
-
-            <SignButton
-              message={this.state.message}
-              signMessageRequested={this.props.signMessageRequested}
-            />
+            <div>
+              <SignButton
+                message={this.state.message}
+                signMessageRequested={this.props.signMessageRequested}
+              />
+            </div>
 
             {signedMessage && (
               <div className="input-group-wrapper SignMessage-inputBox">
-                <label className="input-group">
-                  <div className="input-group-header">{translate('MSG_SIGNATURE')}</div>
-                  <CodeBlock className="SignMessage-inputBox">
-                    {JSON.stringify(signedMessage, null, 2)}
-                  </CodeBlock>
-                </label>
+                <CopyToClipboard text={JSON.stringify(signedMessage, null, 2)}>
+                  <label className="input-group">
+                    <div className="input-group-header">
+                      {translate('MSG_SIGNATURE')} (Click to copy to clipboard)
+                    </div>
+                    <CodeBlock className="SignMessage-inputBox">
+                      {JSON.stringify(signedMessage, null, 2)}
+                    </CodeBlock>
+                  </label>
+                </CopyToClipboard>
               </div>
             )}
           </div>
