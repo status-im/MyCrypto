@@ -9,6 +9,7 @@ import { messageActions } from 'features/message';
 import { walletActions, walletSelectors } from 'features/wallet';
 import WalletDecrypt, { DISABLE_WALLETS } from 'components/WalletDecrypt';
 import { TextArea, CodeBlock } from 'components/ui';
+import Principles from './messages/principles';
 import SignButton from './SignButton';
 import './index.scss';
 
@@ -26,7 +27,7 @@ interface State {
 }
 
 const initialState: State = {
-  message: ''
+  message: Principles
 };
 
 const messagePlaceholder = translateRaw('SIGN_MSG_PLACEHOLDER');
