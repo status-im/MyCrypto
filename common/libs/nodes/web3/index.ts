@@ -53,7 +53,7 @@ export function isWeb3Node(nodeLib: INode | Web3Node): nodeLib is Web3Node {
   return nodeLib instanceof Web3Node;
 }
 
-export const Web3Service = 'MetaMask / Mist';
+export const Web3Service = 'Status / MetaMask / Mist';
 
 export async function setupWeb3Node() {
   const { web3 } = window as any;

@@ -90,7 +90,7 @@ export class SignMessage extends Component<Props, State> {
                     style={{ color: this.state.copied ? 'green' : null }}
                   >
                     <div className="input-group-header">
-                      {translate('MSG_SIGNATURE')} (Click to copy to clipboard)
+                      {translate('MSG_SIGNATURE')} (Click or touch to copy to clipboard)
                     </div>
                     <CodeBlock
                       className="SignMessage-inputBox"
