@@ -15,7 +15,7 @@ We don't compromise on security when building features. We use state-of-the-art 
 Privacy is the power to selectively reveal oneself to the world. For us, it's essential to protect privacy in both communications and transactions, as well as being a pseudo-anonymous platform. Additionally, we strive to provide the right of total anonymity.
 
 **V. Transparency**
-We strive for complete openness and symmetry of information, and have no border between our core contributors and our community. We are frank about our shortcomings, especially when making short-term tradeoffs in service of our long-term goals.
+We strive for complete openness and symmetry of information within the organization, and have no border between our core contributors and our community. We are frank about our shortcomings, especially when making short-term tradeoffs in service of our long-term goals.
 
 **VI. Openness**
 The software we create is a public good. It is made available via a free and open source license, for anyone to share, modify and benefit from. We believe in permission-less participation.
@@ -30,5 +30,4 @@ We believe in fair and widespread access to our software, with an emphasis on ea
 We create software incentivized to continue to exist and improve, without the stewardship of a single entity or any of the current team members.
 
 **X. Resourcefulness**
-We are relentlessly resourceful. As we grow and have ready access to capital, it is our obligation to token holders to fight bureaucracy and inefficiencies. This means solving problems in the most effective way possible at lower economic costs (in terms of capital, time and resources).
-`
+We are relentlessly resourceful. As we grow and have ready access to capital, it is our obligation to token holders to fight bureaucracy and inefficiencies within the organization. This means solving problems in the most effective way possible at lower economic costs (in terms of capital, time and resources).`
